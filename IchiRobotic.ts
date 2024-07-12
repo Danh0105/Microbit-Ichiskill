@@ -33,7 +33,7 @@ namespace IchiRobotic {
     //% group="Motor" weight=57
     //% speed.min=-255 speed.max=255
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=4
-    function MotorRunDelay(index: IchiLib.Motors, speed: number, delay: number): void {
+    export function MotorRunDelay(index: IchiLib.Motors, speed: number, delay: number): void {
         MotorRun(index, speed);
         basic.pause(delay * 1000);
         MotorRun(index, 0);
