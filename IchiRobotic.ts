@@ -1,7 +1,5 @@
 //% color="#0345fc" weight=10 icon="\uf19d"
 namespace IchiRobotic {
-
-    //% group="Servo" weight=62
     //% weight=100 help=servos/set-angle
     //% blockId=servoservosetangle block="set %servo angle to %degrees=protractorPicker °"
     //% degrees.defl=90
