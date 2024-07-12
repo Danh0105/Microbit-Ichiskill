@@ -68,11 +68,7 @@ namespace IchiRobotic {
                 speed
             );
         }
-
-        // Thực hiện chờ trong khoảng thời gian delay (sau khi động cơ bắt đầu chạy)
         basic.pause(delay * 1000);
-
-        // Dừng động cơ sau khi chờ xong
         IchiLib.MotorRunDual(
             IchiLib.Motors.Trái,
             0,
