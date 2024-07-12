@@ -29,7 +29,6 @@ namespace IchiRobotic {
         }
     }
     //% color="#fc0303"
-    //% blockGap=50
     //% blockId=robotbit_motor_rundelay block="Động cơ|%index|di chuyển với tốc độ %speed|trong %delay|s"
     //% group="Motor" weight=57
     //% speed.min=-255 speed.max=255
@@ -40,11 +39,10 @@ namespace IchiRobotic {
         MotorRun(index, 0);
     }
     //% color="#fc0303"
-    //% blockGap=50
     //% blockId=robotbit_robotrun block="Di chuyển về |%index| với tốc độ %speed|trong %delay|s"
     //% group="Motor" weight=57
     //% speed.min=-255 speed.max=255
-    //% name.fieldEditor="gridpicker" name.fieldOptions.columns=4
+    //% name.fieldEditor="gridpicker" name.fieldOptions.columns=5
     export function RobotRun(index: IchiLib.Move, speed: number, delay: number): void {
         if(index = 1){
             IchiLib.MotorRunDual(
