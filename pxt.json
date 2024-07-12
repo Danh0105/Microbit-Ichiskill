@@ -1,17 +1,15 @@
 {
     "name": "Ichi Skill",
-    "description": "",
+    "description": "Công ty cổ phần giáo dục khoa học công nghệ",
     "dependencies": {
         "core": "*",
-        "radio": "*",
-        "microphone": "*",
-        "Ichi skill": "pkg:Ichi skill.json"
+        "microphone": "*"
     },
     "files": [
-        "main.blocks",
-        "main.ts",
         "README.md",
-        "Ichi skill.json"
+        "Ichi skill.json",
+        "IchiLib.ts",
+        "IchiRobotic.ts"
     ],
     "testFiles": [
         "test.ts"
@@ -23,5 +21,6 @@
     "supportedTargets": [
         "microbit"
     ],
-    "preferredEditor": "blocksprj"
+    "preferredEditor": "tsprj",
+    "icon": "https://pxt.azureedge.net/blob/7ae30013e6ae7975b5686d614d701fa1e8821768/static/libs/servo.png"
 }

@@ -12,7 +12,8 @@ namespace IchiRobotic {
     //% parts=microservo trackArgs=0
     //% group="Positional"
     function Servo(degree: number): void {
-        IchiLib.Servo.setAngle(degrees);
+        let angle = new IchiLib.Servo();
+        angle.setAngle(degree);
     }
     //% color="#fc0303"
     //% blockId=robotbit_motor_run block="Motor|%index|speed %speed"
