@@ -51,10 +51,14 @@ namespace IchiLib {
 
     export enum Motors {
         Phải = 0x1,
-        Trái = 0x2,
-
+        Trái = 0x4,
     }
-
+    export enum Move {
+        Trước = 1,
+        Sau = 2,
+        Trái = 3,
+        Phải = 4,
+    }
     export enum Steppers {
         M1 = 0x1,
         M2 = 0x2
