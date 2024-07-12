@@ -50,10 +50,9 @@ namespace IchiLib {
     }
 
     export enum Motors {
-        M1A = 0x1,
-        M1B = 0x2,
-        M2A = 0x3,
-        M2B = 0x4
+        "Phải" = 0x1,
+        "Trái" = 0x2,
+
     }
 
     export enum Steppers {
