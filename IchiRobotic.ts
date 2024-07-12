@@ -38,7 +38,6 @@ namespace IchiRobotic {
     }
     //% color="#fc0303"
     //% blockId=3 block="Di chuyển về |%index| với tốc độ %speed|trong %delay|s"
-    //% group="Motor" weight=57
     //% speed.min=-255 speed.max=255
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=5
     export function RobotRun(index: IchiLib.Move, speed: number, delay: number): void {
