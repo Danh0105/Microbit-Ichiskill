@@ -1,11 +1,5 @@
 //% color="#0345fc" weight=10 icon="\uf19d"
 namespace IchiRobotic {
-    //% blockId=servoservosetangle block="set %servo angle to %degrees=protractorPicker °"
-
-    function Servo(degree: number): void {
-        let angle = new IchiLib.Servo();
-        angle.setAngle(degree);
-    }
     //% color="#fc0303"
     //% blockId=robotbit_motor_run block="Motor|%index|speed %speed"
     //% group="Motor" weight=59
