@@ -43,7 +43,6 @@ namespace IchiRobotic {
                 speed,
                 IchiLib.Motors.Phải, speed
             )
-            basic.pause(delay * 1000);
         }
         else if (index = 2) {
             IchiLib.MotorRunDual(
@@ -69,5 +68,6 @@ namespace IchiRobotic {
             )
             basic.pause(delay * 1000);
         }
+        basic.pause(delay * 1000);
     }
 }
