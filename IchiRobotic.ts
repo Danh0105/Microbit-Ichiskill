@@ -32,7 +32,6 @@ namespace IchiRobotic {
     export function MotorRunDelay(index: IchiLib.Motors, speed: number, delay: number): void {
         MotorRun(index, speed);
         basic.pause(delay * 1000);
-        MotorRun(index, 0);
     }
     //% color="#fc0303"
     //% blockId=3 block="Di chuyển về |%index| với tốc độ %speed|trong %delay|s"
@@ -46,7 +45,7 @@ namespace IchiRobotic {
             )
             basic.pause(delay * 1000);
         }
-        if (index = 2) {
+        else if (index = 2) {
             IchiLib.MotorRunDual(
                 IchiLib.Motors.Trái,
                 -speed,
@@ -54,7 +53,7 @@ namespace IchiRobotic {
             )
             basic.pause(delay * 1000);
         }
-        if (index = 3) {
+        else if (index = 3) {
             IchiLib.MotorRunDual(
                 IchiLib.Motors.Trái,
                 speed,
@@ -62,7 +61,7 @@ namespace IchiRobotic {
             )
             basic.pause(delay * 1000);
         }
-        if (index = 3) {
+        else {
             IchiLib.MotorRunDual(
                 IchiLib.Motors.Trái,
                 0,
