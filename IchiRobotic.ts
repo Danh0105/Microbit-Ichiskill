@@ -1,8 +1,7 @@
 //% color="#0345fc" weight=10 icon="\uf19d"
 namespace IchiRobotic {
     //% color="#fc0303"
-    //% blockId=robotbit_motor_run block="Động cơ |%index|di chuyển với tốc độ %speed"
-    //% group="Motor" weight=59
+    //% blockId=1 block="Động cơ |%index|di chuyển với tốc độ %speed"
     //% speed.min=-255 speed.max=255
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=4
     export function MotorRun(index: IchiLib.Motors, speed: number): void {
@@ -29,8 +28,7 @@ namespace IchiRobotic {
         }
     }
     //% color="#fc0303"
-    //% blockId=robotbit_motor_rundelay block="Động cơ|%index|di chuyển với tốc độ %speed|trong %delay|s"
-    //% group="Motor" weight=57
+    //% blockId=2 block="Động cơ|%index|di chuyển với tốc độ %speed|trong %delay|s"
     //% speed.min=-255 speed.max=255
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=4
     export function MotorRunDelay(index: IchiLib.Motors, speed: number, delay: number): void {
@@ -39,7 +37,7 @@ namespace IchiRobotic {
         MotorRun(index, 0);
     }
     //% color="#fc0303"
-    //% blockId=robotbit_robotrun block="Di chuyển về |%index| với tốc độ %speed|trong %delay|s"
+    //% blockId=3 block="Di chuyển về |%index| với tốc độ %speed|trong %delay|s"
     //% group="Motor" weight=57
     //% speed.min=-255 speed.max=255
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=5
