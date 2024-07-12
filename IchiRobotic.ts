@@ -33,41 +33,52 @@ namespace IchiRobotic {
         MotorRun(index, speed);
         basic.pause(delay * 1000);
     }
+   
     //% color="#fc0303"
-    //% blockId=3 block="Di chuyển về |%index| với tốc độ %speed|trong %delay|s"
+    //% blockId=robot_run block="Di chuyển về |%index| với tốc độ %speed|trong %delay|s"
     //% speed.min=-255 speed.max=255
+    //% index.fieldEditor="gridpicker" index.fieldOptions.columns=4
     export function RobotRun(index: IchiLib.Move, speed: number, delay: number): void {
-        if(index = 1){
+        if (index == 1) {
             IchiLib.MotorRunDual(
                 IchiLib.Motors.Trái,
                 speed,
-                IchiLib.Motors.Phải, speed
-            )
-        }
-        else if (index = 2) {
+                IchiLib.Motors.Phải,
+                speed
+            );
+        } else if (index == 2) {
             IchiLib.MotorRunDual(
                 IchiLib.Motors.Trái,
                 -speed,
-                IchiLib.Motors.Phải, speed
-            )
-            basic.pause(delay * 1000);
-        }
-        else if (index = 3) {
+                IchiLib.Motors.Phải,
+                speed
+            );
+        } else if (index == 3) {
             IchiLib.MotorRunDual(
                 IchiLib.Motors.Trái,
                 speed,
-                IchiLib.Motors.Phải, 0
-            )
-            basic.pause(delay * 1000);
-        }
-        else {
+                IchiLib.Motors.Phải,
+                0
+            );
+        } else {
             IchiLib.MotorRunDual(
                 IchiLib.Motors.Trái,
                 0,
-                IchiLib.Motors.Phải, speed
-            )
-            basic.pause(delay * 1000);
+                IchiLib.Motors.Phải,
+                speed
+            );
         }
+
+        // Thực hiện chờ trong khoảng thời gian delay (sau khi động cơ bắt đầu chạy)
         basic.pause(delay * 1000);
+
+        // Dừng động cơ sau khi chờ xong
+        IchiLib.MotorRunDual(
+            IchiLib.Motors.Trái,
+            0,
+            IchiLib.Motors.Phải,
+            0
+        );
     }
+
 }
