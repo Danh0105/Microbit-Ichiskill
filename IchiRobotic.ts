@@ -3,7 +3,6 @@ namespace IchiRobotic {
     //% color="#fc0303"
     //% blockId=1 block="Động cơ |%index|di chuyển với tốc độ %speed"
     //% speed.min=-255 speed.max=255
-    //% name.fieldEditor="gridpicker" name.fieldOptions.columns=4
     export function MotorRun(index: IchiLib.Motors, speed: number): void {
         if (!IchiLib.initialized) {
             IchiLib.initPCA9685()
@@ -30,7 +29,6 @@ namespace IchiRobotic {
     //% color="#fc0303"
     //% blockId=2 block="Động cơ|%index|di chuyển với tốc độ %speed|trong %delay|s"
     //% speed.min=-255 speed.max=255
-    //% name.fieldEditor="gridpicker" name.fieldOptions.columns=4
     export function MotorRunDelay(index: IchiLib.Motors, speed: number, delay: number): void {
         MotorRun(index, speed);
         basic.pause(delay * 1000);
@@ -39,7 +37,6 @@ namespace IchiRobotic {
     //% color="#fc0303"
     //% blockId=3 block="Di chuyển về |%index| với tốc độ %speed|trong %delay|s"
     //% speed.min=-255 speed.max=255
-    //% name.fieldEditor="gridpicker" name.fieldOptions.columns=5
     export function RobotRun(index: IchiLib.Move, speed: number, delay: number): void {
         if(index = 1){
             IchiLib.MotorRunDual(
