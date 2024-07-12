@@ -28,6 +28,7 @@ namespace IchiRobotic {
             IchiLib.setPwm(pn, 0, -speed)
         }
     }
+    //% blockGap=50
     //% blockId=robotbit_motor_rundelay block="Motor|%index|speed %speed|delay %delay|s"
     //% group="Motor" weight=57
     //% speed.min=-255 speed.max=255
