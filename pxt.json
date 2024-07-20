@@ -8,7 +8,6 @@
     },
     "files": [
         "README.md",
-        "Ichi skill.json",
         "IchiLib.ts",
         "IchiRobotic.ts",
         "tutorial-info-cache.json",
