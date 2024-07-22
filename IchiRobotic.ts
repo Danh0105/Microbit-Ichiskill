@@ -77,7 +77,7 @@ namespace IchiRobotic {
         );
     }
     //% color="#fc0303"
-    //% blockId=servoservosetangle block="set %servo angle to %degrees=protractorPicker °"
+    //% blockId=servoservosetangle block="set %IchiLib angle to %degrees=protractorPicker °"
     //% speed.min=-255 speed.max=255
     //% index.fieldEditor="gridpicker" index.fieldOptions.columns=4
     export function setAngle(degrees:number){
