@@ -72,12 +72,6 @@ namespace IchiRobotic {
     // Điều chỉnh mã cho hàm thiết lập góc servo
     //% block
     //% group="Servo"
-    //% color="#AA278D"
-    //% weight=100 help=servos/set-angle
-    //% blockId=servoservosetangle block="set %servo angle to %degrees=protractorPicker °"
-    //% degrees.defl=90
-    //% servo.fieldEditor="gridpicker"
-    //% fixedInstances
     export class Servo {
         private _minAngle: number;
         private _maxAngle: number;
@@ -98,13 +92,13 @@ namespace IchiRobotic {
         }
 
         /**
-         * Set the servo angle
+         * Thiết lập góc động cơ servo
          */
         //% block
         //% group="Servo"
         //% color="#AA278D"
         //% weight=100 help=servos/set-angle
-        //% blockId=servoservosetangle block="set %servo angle to %degrees=protractorPicker °"
+        //% blockId=servoservosetangle block="Thiết lập góc động cơ servo %servo thành %degrees=protractorPicker °"
         //% degrees.defl=90
         //% servo.fieldEditor="gridpicker"
         //% servo.fieldOptions.width=220
@@ -137,7 +131,7 @@ namespace IchiRobotic {
         //% group="Servo"
         //% color="#AA278D"
         //% weight=99 help=servos/run
-        //% blockId=servoservorun block="continuous %servo run at %speed=speedPicker \\%"
+        //% blockId=servoservorun block="Servo %servo chạy liên tục ở tốc độ %speed=speedPicker \\%"
         //% servo.fieldEditor="gridpicker"
         //% servo.fieldOptions.width=220
         //% servo.fieldOptions.columns=2
@@ -161,7 +155,7 @@ namespace IchiRobotic {
         //% group="Servo"
         //% color="#AA278D"
         //% weight=10 help=servos/set-pulse
-        //% blockId=servoservosetpulse block="set %servo pulse to %micros μs"
+        //% blockId=servoservosetpulse block="Thiết lập xung động cơ servo %servo thành %micros μs"
         //% micros.min=500 micros.max=2500
         //% micros.defl=1500
         //% servo.fieldEditor="gridpicker"
@@ -187,7 +181,7 @@ namespace IchiRobotic {
         //% group="Servo"
         //% color="#AA278D"
         //% weight=10 help=servos/stop
-        //% blockId=servoservostop block="stop %servo"
+        //% blockId=servoservostop block="đừng servo %servo"
         //% servo.fieldEditor="gridpicker"
         //% servo.fieldOptions.width=220
         //% servo.fieldOptions.columns=2
@@ -221,7 +215,7 @@ namespace IchiRobotic {
         //% group="Servo"
         //% color="#AA278D"
         //% help=servos/set-range
-        //% blockId=servosetrange block="set %servo range from %minAngle to %maxAngle"
+        //% blockId=servosetrange block="Thiết lập phạm vi động cơ servo %servo từ %minAngle đến %maxAngle"
         //% minAngle.min=0 minAngle.max=90
         //% maxAngle.min=90 maxAngle.max=180 maxAngle.defl=180
         //% servo.fieldEditor="gridpicker"
@@ -241,7 +235,7 @@ namespace IchiRobotic {
         //% group="Servo"
         //% color="#AA278D"
         //% help=servos/set-stop-on-neutral
-        //% blockId=servostoponneutral block="set %servo stop on neutral %enabled"
+        //% blockId=servostoponneutral block="Thiết lập động cơ servo %servo dừng ở giữa %enabled"
         //% enabled.shadow=toggleOnOff
         //% servo.fieldEditor="gridpicker"
         //% servo.fieldOptions.width=220
