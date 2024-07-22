@@ -14,7 +14,7 @@
         "main.py",
         "main.ts",
         "Ichi Skill.json",
-        "servo.ts"
+        "targetoverrides.ts"
     ],
     "testFiles": [
         "test.ts"

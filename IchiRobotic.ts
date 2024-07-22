@@ -77,9 +77,11 @@ namespace IchiRobotic {
         );
     }
  
-    /**
-     * Set the servo angle
-     */
-    //% color="#fc0303"
-   
+   //% color="#fc0303"
+         //% blockId=servoservosetangle block="set %servo angle to %degrees=protractorPicker °"
+    //% speed.min=-255 speed.max=255
+    //% index.fieldEditor="gridpicker" index.fieldOptions.columns=4
+    export function setAngle(degree: number){
+        IchiLib.P0.setAngle(degree)
+    }
 }
