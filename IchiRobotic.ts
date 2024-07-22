@@ -77,13 +77,6 @@ namespace IchiRobotic {
         );
     }
  
-        //% blockId=servoservosetangle block="set %servo angle to %degrees=protractorPicker °"
-        //% degrees.defl=90
-        //% servo.fieldEditor="gridpicker"
-        //% servo.fieldOptions.width=220
-        //% servo.fieldOptions.columns=2
-        //% blockGap=8
-        //% parts=microservo trackArgs=0
     export function setAngle(degree: number){
         IchiLib.P0.setAngle(degree)
     }
