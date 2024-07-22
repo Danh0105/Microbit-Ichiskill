@@ -94,6 +94,7 @@ namespace IchiRobotic {
         /**
          * Set the servo angle
          */
+        //% group="Servo"
         //% color="#fc0303"
         //% weight=100 help=servos/set-angle
         //% blockId=servoservosetangle block="set %servo angle to %degrees=protractorPicker °"
