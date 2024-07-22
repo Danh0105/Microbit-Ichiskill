@@ -72,7 +72,6 @@ namespace IchiRobotic {
     //% servo.fieldOptions.columns=2
     //% blockGap=8
     //% parts=microservo trackArgs=0
-    //% group="Positional"
     export function setServoAngle(servo: IchiLib.PinServo, degrees: number): void {
         servo.setAngle(degrees);
     }
