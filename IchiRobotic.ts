@@ -76,7 +76,7 @@ namespace IchiRobotic {
         private _angle: number;
 
         constructor() {
-            this._angle = undefined;
+            this._angle = 90; // Đặt góc mặc định là 90 nếu không có giá trị nào
             this._minAngle = 0;
             this._maxAngle = 180;
             this._stopOnNeutral = false;
@@ -98,7 +98,6 @@ namespace IchiRobotic {
         //% servo.fieldOptions.width=220
         //% servo.fieldOptions.columns=2
         //% blockGap=8
-        //% parts=microservo trackArgs=0
         //% group="Servo"
         setAngle(degrees: number) {
             degrees = this.clampDegrees(degrees);
@@ -107,15 +106,16 @@ namespace IchiRobotic {
         }
 
         get angle() {
-            return this._angle || 90;
+            return this._angle;
         }
 
         protected internalSetContinuous(continuous: boolean): void {
-
+            // Placeholder - Override in subclass if needed
         }
 
         protected internalSetAngle(angle: number): number {
-            return 0;
+            // Placeholder - Override in subclass if needed
+            return angle;
         }
 
         /**
@@ -132,19 +132,19 @@ namespace IchiRobotic {
         //% group="Servo"
         run(speed: number): void {
             const degrees = this.clampDegrees(Math.map(speed, -100, 100, this._minAngle, this._maxAngle));
-            const neutral = (this.maxAngle - this.minAngle) >> 1;
+            const neutral = (this._maxAngle - this._minAngle) / 2;
             this.internalSetContinuous(true);
-            if (this._stopOnNeutral && degrees == neutral)
+            if (this._stopOnNeutral && degrees == neutral) {
                 this.stop();
-            else
+            } else {
                 this._angle = this.internalSetAngle(degrees);
+            }
         }
 
         /**
          * Set the pulse width to the servo in microseconds
          * @param micros the width of the pulse in microseconds
          */
-
         //% weight=10 help=servos/set-pulse
         //% blockId=servoservosetpulse block="set %servo pulse to %micros μs"
         //% micros.min=500 micros.max=2500
@@ -162,7 +162,7 @@ namespace IchiRobotic {
         }
 
         protected internalSetPulse(micros: number): void {
-
+            // Placeholder - Override in subclass if needed
         }
 
         /**
@@ -179,8 +179,9 @@ namespace IchiRobotic {
         //% blockGap=8
         //% group="Servo"
         stop() {
-            if (this._angle !== undefined)
+            if (this._angle !== undefined) {
                 this.internalStop();
+            }
         }
 
         /**
@@ -233,7 +234,9 @@ namespace IchiRobotic {
             this._stopOnNeutral = enabled;
         }
 
-        protected internalStop() { }
+        protected internalStop() {
+            // Placeholder - Override in subclass if needed
+        }
     }
 
     export class PinServo extends Servo {
@@ -262,5 +265,4 @@ namespace IchiRobotic {
             this._pin.setPull(PinPullMode.PullNone);
         }
     }
-
 }
