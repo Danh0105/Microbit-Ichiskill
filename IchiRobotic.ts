@@ -1,6 +1,8 @@
 //% color="#0345fc" weight=10 icon="\uf19d"
+//% groups='["Robot", "Servo"]'
 namespace IchiRobotic {
     // Điều chỉnh mã cho các hàm điều khiển động cơ
+    //% group="Robot"
     //% color="#fc0303"
     //% blockId=1 block="Động cơ |%index| di chuyển với tốc độ %speed"
     //% speed.min=-255 speed.max=255
