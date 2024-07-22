@@ -94,7 +94,7 @@ namespace IchiRobotic {
          * Set the servo angle
          */
         //% weight=100 help=servos/set-angle
-        //% blockId=servoservosetangle block="Thiết lập góc động cơ servo %servo thành %degrees=protractorPicker °"
+        //% blockId=servoservosetangle block="set %servo angle to %degrees=protractorPicker °"
         //% degrees.defl=90
         //% servo.fieldEditor="gridpicker"
         //% servo.fieldOptions.width=220
