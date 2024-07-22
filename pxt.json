@@ -1,5 +1,5 @@
 {
-    "name": "Ichi Skill",
+    "name": "Ichi Skill Sao chép",
     "version": "0.0.2",
     "description": "Công ty cổ phần giáo dục khoa học công nghệ",
     "dependencies": {
@@ -18,7 +18,6 @@
     "testFiles": [
         "test.ts"
     ],
-    "public": true,
     "targetVersions": {
         "target": "6.0.28",
         "targetId": "microbit"
