@@ -110,11 +110,12 @@ namespace IchiRobotic {
         }
 
         protected internalSetContinuous(continuous: boolean): void {
-
+            // Implement continuous setting if needed
         }
 
         protected internalSetAngle(angle: number): number {
-            return 0;
+            // Default implementation - override in derived classes
+            return angle;
         }
 
         /**
@@ -130,12 +131,13 @@ namespace IchiRobotic {
         //% parts=microservo trackArgs=0
         run(speed: number): void {
             const degrees = this.clampDegrees(Math.map(speed, -100, 100, this._minAngle, this._maxAngle));
-            const neutral = (this.maxAngle - this.minAngle) >> 1;
+            const neutral = (this._maxAngle - this._minAngle) >> 1;
             this.internalSetContinuous(true);
-            if (this._stopOnNeutral && degrees == neutral)
+            if (this._stopOnNeutral && degrees == neutral) {
                 this.stop();
-            else
+            } else {
                 this._angle = this.internalSetAngle(degrees);
+            }
         }
 
         /**
@@ -158,7 +160,7 @@ namespace IchiRobotic {
         }
 
         protected internalSetPulse(micros: number): void {
-
+            // Implement pulse width setting if needed
         }
 
         /**
@@ -174,8 +176,9 @@ namespace IchiRobotic {
         //% servo.fieldOptions.columns=2
         //% parts=microservo trackArgs=0
         stop() {
-            if (this._angle !== undefined)
+            if (this._angle !== undefined) {
                 this.internalStop();
+            }
         }
 
         /**
@@ -226,7 +229,9 @@ namespace IchiRobotic {
             this._stopOnNeutral = enabled;
         }
 
-        protected internalStop() { }
+        protected internalStop() {
+            // Implement stop if needed
+        }
     }
 
     export class PinServo extends Servo {
