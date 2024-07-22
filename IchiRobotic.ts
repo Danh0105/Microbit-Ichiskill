@@ -103,7 +103,7 @@ namespace IchiRobotic {
         //% servo.fieldOptions.columns=2
         //% blockGap=8
         //% parts=microservo trackArgs=0
-        //% group="Positional"
+        //% group="Servo"
         setAngle(degrees: number) {
             degrees = this.clampDegrees(degrees);
             this.internalSetContinuous(false);
@@ -132,7 +132,7 @@ namespace IchiRobotic {
         //% servo.fieldOptions.width=220
         //% servo.fieldOptions.columns=2
         //% parts=microservo trackArgs=0
-        //% group="Continuous"
+        //% group="Servo"
         //% blockGap=8
         run(speed: number): void {
             const degrees = this.clampDegrees(Math.map(speed, -100, 100, this._minAngle, this._maxAngle));
@@ -157,7 +157,7 @@ namespace IchiRobotic {
         //% servo.fieldOptions.width=220
         //% servo.fieldOptions.columns=2
         //% parts=microservo trackArgs=0
-        //% group="Configuration"
+        //% group="Servo"
         //% blockGap=8
         setPulse(micros: number) {
             micros = micros | 0;
@@ -180,7 +180,7 @@ namespace IchiRobotic {
         //% servo.fieldOptions.width=220
         //% servo.fieldOptions.columns=2
         //% parts=microservo trackArgs=0
-        //% group="Continuous"
+        //% group="Servo"
         //% blockGap=8
         stop() {
             if (this._angle !== undefined)
@@ -214,7 +214,7 @@ namespace IchiRobotic {
         //% servo.fieldOptions.width=220
         //% servo.fieldOptions.columns=2
         //% parts=microservo trackArgs=0
-        //% group="Configuration"
+        //% group="Servo"
         //% blockGap=8
         public setRange(minAngle: number, maxAngle: number) {
             this._minAngle = Math.max(0, Math.min(90, minAngle | 0));
@@ -228,7 +228,7 @@ namespace IchiRobotic {
         //% help=servos/set-stop-on-neutral
         //% blockId=servostoponneutral block="set %servo stop on neutral %enabled"
         //% enabled.shadow=toggleOnOff
-        //% group="Configuration"
+        //% group="Servo"
         //% blockGap=8
         //% servo.fieldEditor="gridpicker"
         //% servo.fieldOptions.width=220
