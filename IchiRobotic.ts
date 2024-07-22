@@ -72,7 +72,7 @@ namespace IchiRobotic {
     // Điều chỉnh mã cho hàm thiết lập góc servo
     //% block
     //% group="Servo"
-    //% color="#fc0303"
+    //% color="#AA278D"
     //% weight=100 help=servos/set-angle
     //% blockId=servoservosetangle block="set %servo angle to %degrees=protractorPicker °"
     //% degrees.defl=90
@@ -102,7 +102,7 @@ namespace IchiRobotic {
          */
         //% block
         //% group="Servo"
-        //% color="#fc0303"
+        //% color="#AA278D"
         //% weight=100 help=servos/set-angle
         //% blockId=servoservosetangle block="set %servo angle to %degrees=protractorPicker °"
         //% degrees.defl=90
@@ -135,7 +135,7 @@ namespace IchiRobotic {
          */
         //% block
         //% group="Servo"
-        //% color="#fc0303"
+        //% color="#AA278D"
         //% weight=99 help=servos/run
         //% blockId=servoservorun block="continuous %servo run at %speed=speedPicker \\%"
         //% servo.fieldEditor="gridpicker"
@@ -159,7 +159,7 @@ namespace IchiRobotic {
          */
         //% block
         //% group="Servo"
-        //% color="#fc0303"
+        //% color="#AA278D"
         //% weight=10 help=servos/set-pulse
         //% blockId=servoservosetpulse block="set %servo pulse to %micros μs"
         //% micros.min=500 micros.max=2500
@@ -185,7 +185,7 @@ namespace IchiRobotic {
         // It will also not provide any holding force.
         //% block
         //% group="Servo"
-        //% color="#fc0303"
+        //% color="#AA278D"
         //% weight=10 help=servos/stop
         //% blockId=servoservostop block="stop %servo"
         //% servo.fieldEditor="gridpicker"
@@ -219,7 +219,7 @@ namespace IchiRobotic {
          */
         //% block
         //% group="Servo"
-        //% color="#fc0303"
+        //% color="#AA278D"
         //% help=servos/set-range
         //% blockId=servosetrange block="set %servo range from %minAngle to %maxAngle"
         //% minAngle.min=0 minAngle.max=90
@@ -239,7 +239,7 @@ namespace IchiRobotic {
          */
         //% block
         //% group="Servo"
-        //% color="#fc0303"
+        //% color="#AA278D"
         //% help=servos/set-stop-on-neutral
         //% blockId=servostoponneutral block="set %servo stop on neutral %enabled"
         //% enabled.shadow=toggleOnOff
