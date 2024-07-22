@@ -137,7 +137,7 @@ namespace IchiRobotic {
     //% group="Servo"
         //% color="#fc0303"
         //% weight=99 help=servos/run
-        //% blockId=servoservorun block="continuous %servo run at %speed=speedPicker \\%"
+        //% blockId=servoservorun block="Động cở servo %servo chạy liên tục ở tốc độ %speed=speedPicker \\%"
         //% servo.fieldEditor="gridpicker"
         //% servo.fieldOptions.width=220
         //% servo.fieldOptions.columns=2
