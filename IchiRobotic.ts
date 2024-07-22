@@ -67,11 +67,6 @@ namespace IchiRobotic {
     //% weight=100 help=servos/set-angle
     //% blockId=servoservosetangle block="set %servo angle to %degrees=protractorPicker °"
     //% degrees.defl=90
-    //% servo.fieldEditor="gridpicker"
-    //% servo.fieldOptions.width=220
-    //% servo.fieldOptions.columns=2
-    //% blockGap=8
-    //% parts=microservo trackArgs=0
     export function setServoAngle(servo: IchiLib.PinServo, degrees: number): void {
         servo.setAngle(degrees);
     }
