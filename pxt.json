@@ -13,8 +13,8 @@
         "tutorial-info-cache.json",
         "main.py",
         "main.ts",
-        "Ichi Skill.json",
-        "targetoverrides.ts"
+        "servo.ts",
+        "Ichi Skill.json"
     ],
     "testFiles": [
         "test.ts"
