@@ -1,6 +1,6 @@
 {
     "name": "Ichi Skill ",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "description": "Công ty cổ phần giáo dục khoa học công nghệ",
     "dependencies": {
         "core": "*",
