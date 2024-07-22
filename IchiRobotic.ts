@@ -1,4 +1,5 @@
 //% color="#0345fc" weight=10 icon="\uf19d"
+//% groups='["Robot", "Servo"]'
 namespace IchiRobotic {
     // Điều chỉnh mã cho các hàm điều khiển động cơ
     //% color="#fc0303"
@@ -35,6 +36,7 @@ namespace IchiRobotic {
     //% color="#fc0303"
     //% blockId=2 block="Động cơ |%index| di chuyển với tốc độ %speed trong %delay|s"
     //% speed.min=-255 speed.max=255
+    //% group="Robot"
     //% blockGap=8
     export function MotorRunDelay(index: IchiLib.Motors, speed: number, delay: number): void {
         MotorRun(index, speed);
@@ -47,6 +49,7 @@ namespace IchiRobotic {
     //% speed.min=-255 speed.max=255
     //% index.fieldEditor="gridpicker" index.fieldOptions.columns=4
     //% blockGap=8
+    //% group="Robot"
     export function RobotRun(index: IchiLib.Move, speed: number, delay: number): void {
         switch (index) {
             case 1:
@@ -126,6 +129,7 @@ namespace IchiRobotic {
         //% servo.fieldOptions.columns=2
         //% parts=microservo trackArgs=0
         //% blockGap=8
+        //% group="Servo"
         run(speed: number): void {
             const degrees = this.clampDegrees(Math.map(speed, -100, 100, this._minAngle, this._maxAngle));
             const neutral = (this.maxAngle - this.minAngle) >> 1;
@@ -150,6 +154,7 @@ namespace IchiRobotic {
         //% servo.fieldOptions.columns=2
         //% parts=microservo trackArgs=0
         //% blockGap=8
+        //% group="Servo"
         setPulse(micros: number) {
             micros = micros | 0;
             micros = Math.clamp(500, 2500, micros);
@@ -172,6 +177,7 @@ namespace IchiRobotic {
         //% servo.fieldOptions.columns=2
         //% parts=microservo trackArgs=0
         //% blockGap=8
+        //% group="Servo"
         stop() {
             if (this._angle !== undefined)
                 this.internalStop();
@@ -205,6 +211,7 @@ namespace IchiRobotic {
         //% servo.fieldOptions.columns=2
         //% parts=microservo trackArgs=0
         //% blockGap=8
+        //% group="Servo"
         public setRange(minAngle: number, maxAngle: number) {
             this._minAngle = Math.max(0, Math.min(90, minAngle | 0));
             this._maxAngle = Math.max(90, Math.min(180, maxAngle | 0));
