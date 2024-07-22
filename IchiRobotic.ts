@@ -70,6 +70,8 @@ namespace IchiRobotic {
     }
 
     // Điều chỉnh mã cho hàm thiết lập góc servo
+     //% block
+    //% group="Servo"
     //% color="#fc0303"
     //% weight=100 help=servos/set-angle
     //% blockId=servoservosetangle block="set %servo angle to %degrees=protractorPicker °"
@@ -98,6 +100,8 @@ namespace IchiRobotic {
         /**
          * Set the servo angle
          */
+         //% block
+    //% group="Servo"
         //% color="#fc0303"
         //% weight=100 help=servos/set-angle
         //% blockId=servoservosetangle block="set %servo angle to %degrees=protractorPicker °"
@@ -129,6 +133,8 @@ namespace IchiRobotic {
          * Set the throttle on a continuous servo
          * @param speed the throttle of the motor from -100% to 100%
          */
+         //% block
+    //% group="Servo"
         //% color="#fc0303"
         //% weight=99 help=servos/run
         //% blockId=servoservorun block="continuous %servo run at %speed=speedPicker \\%"
@@ -151,6 +157,8 @@ namespace IchiRobotic {
          * Set the pulse width to the servo in microseconds
          * @param micros the width of the pulse in microseconds
          */
+         //% block
+    //% group="Servo"
         //% color="#fc0303"
         //% weight=10 help=servos/set-pulse
         //% blockId=servoservosetpulse block="set %servo pulse to %micros μs"
@@ -175,6 +183,8 @@ namespace IchiRobotic {
          */
         // On a normal servo this will stop the servo where it is, rather than return it to neutral position.
         // It will also not provide any holding force.
+         //% block
+    //% group="Servo"
         //% color="#fc0303"
         //% weight=10 help=servos/stop
         //% blockId=servoservostop block="stop %servo"
@@ -207,6 +217,8 @@ namespace IchiRobotic {
          * @param minAngle the minimum angle from 0 to 90
          * @param maxAngle the maximum angle from 90 to 180
          */
+         //% block
+    //% group="Servo"
         //% color="#fc0303"
         //% help=servos/set-range
         //% blockId=servosetrange block="set %servo range from %minAngle to %maxAngle"
@@ -225,6 +237,8 @@ namespace IchiRobotic {
          * Set a servo stop mode so it will stop when the rotation angle is in the neutral position, 90 degrees.
          * @param on true to enable this mode
          */
+         //% block
+    //% group="Servo"
         //% color="#fc0303"
         //% help=servos/set-stop-on-neutral
         //% blockId=servostoponneutral block="set %servo stop on neutral %enabled"
