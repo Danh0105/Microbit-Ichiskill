@@ -61,8 +61,11 @@ namespace IchiRobotic {
             case 3:
                 IchiLib.MotorRunDual(IchiLib.Motors.Trái, speed, IchiLib.Motors.Phải, 0);
                 break;
-            default:
+            case 4:
                 IchiLib.MotorRunDual(IchiLib.Motors.Trái, 0, IchiLib.Motors.Phải, speed);
+                break;
+            default:
+                // Handle unknown index case
                 break;
         }
         basic.pause(delay * 1000);
@@ -76,7 +79,7 @@ namespace IchiRobotic {
         private _angle: number;
 
         constructor() {
-            this._angle = 90; // Đặt góc mặc định là 90 nếu không có giá trị nào
+            this._angle = 90;
             this._minAngle = 0;
             this._maxAngle = 180;
             this._stopOnNeutral = false;
@@ -84,8 +87,7 @@ namespace IchiRobotic {
 
         private clampDegrees(degrees: number): number {
             degrees = degrees | 0;
-            degrees = Math.clamp(this._minAngle, this._maxAngle, degrees);
-            return degrees;
+            return Math.clamp(this._minAngle, this._maxAngle, degrees);
         }
 
         /**
@@ -98,6 +100,7 @@ namespace IchiRobotic {
         //% servo.fieldOptions.width=220
         //% servo.fieldOptions.columns=2
         //% blockGap=8
+        //% parts=microservo trackArgs=0
         //% group="Servo"
         setAngle(degrees: number) {
             degrees = this.clampDegrees(degrees);
@@ -109,12 +112,9 @@ namespace IchiRobotic {
             return this._angle;
         }
 
-        protected internalSetContinuous(continuous: boolean): void {
-            // Placeholder - Override in subclass if needed
-        }
+        protected internalSetContinuous(continuous: boolean): void { }
 
         protected internalSetAngle(angle: number): number {
-            // Placeholder - Override in subclass if needed
             return angle;
         }
 
@@ -132,13 +132,12 @@ namespace IchiRobotic {
         //% group="Servo"
         run(speed: number): void {
             const degrees = this.clampDegrees(Math.map(speed, -100, 100, this._minAngle, this._maxAngle));
-            const neutral = (this._maxAngle - this._minAngle) / 2;
+            const neutral = (this.maxAngle - this.minAngle) / 2;
             this.internalSetContinuous(true);
-            if (this._stopOnNeutral && degrees == neutral) {
+            if (this._stopOnNeutral && degrees === neutral)
                 this.stop();
-            } else {
+            else
                 this._angle = this.internalSetAngle(degrees);
-            }
         }
 
         /**
@@ -161,9 +160,7 @@ namespace IchiRobotic {
             this.internalSetPulse(micros);
         }
 
-        protected internalSetPulse(micros: number): void {
-            // Placeholder - Override in subclass if needed
-        }
+        protected internalSetPulse(micros: number): void { }
 
         /**
          * Stop sending commands to the servo so that its rotation will stop at the current position.
@@ -179,9 +176,8 @@ namespace IchiRobotic {
         //% blockGap=8
         //% group="Servo"
         stop() {
-            if (this._angle !== undefined) {
+            if (this._angle !== undefined)
                 this.internalStop();
-            }
         }
 
         /**
@@ -234,9 +230,7 @@ namespace IchiRobotic {
             this._stopOnNeutral = enabled;
         }
 
-        protected internalStop() {
-            // Placeholder - Override in subclass if needed
-        }
+        protected internalStop() { }
     }
 
     export class PinServo extends Servo {
