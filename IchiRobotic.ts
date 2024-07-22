@@ -76,5 +76,10 @@ namespace IchiRobotic {
             0
         );
     }
-
+ 
+    /**
+     * Set the servo angle
+     */
+    //% color="#fc0303"
+   
 }

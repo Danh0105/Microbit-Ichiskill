@@ -13,7 +13,8 @@
         "tutorial-info-cache.json",
         "main.py",
         "main.ts",
-        "Ichi Skill.json"
+        "Ichi Skill.json",
+        "servo.ts"
     ],
     "testFiles": [
         "test.ts"
