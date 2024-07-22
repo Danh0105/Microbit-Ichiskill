@@ -1,5 +1,5 @@
 {
-    "name": "Ichi Skill Sao chép Sao chép",
+    "name": "Ichi Skill Sao chép Sao chép - Copy",
     "version": "0.0.2",
     "description": "Công ty cổ phần giáo dục khoa học công nghệ",
     "dependencies": {
@@ -14,7 +14,8 @@
         "main.py",
         "main.ts",
         "servo.ts",
-        "Ichi Skill.json"
+        "Ichi Skill.json",
+        "targetoverrides.ts"
     ],
     "testFiles": [
         "test.ts"
