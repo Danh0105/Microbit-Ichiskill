@@ -228,6 +228,7 @@ namespace IchiRobotic {
         //% servo.fieldEditor="gridpicker"
         //% servo.fieldOptions.width=220
         //% servo.fieldOptions.columns=2
+        //% group="Servo"
         public setStopOnNeutral(enabled: boolean) {
             this._stopOnNeutral = enabled;
         }
