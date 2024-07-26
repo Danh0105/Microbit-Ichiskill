@@ -133,7 +133,6 @@ namespace IchiRobotic {
          */
          //% block
     //% group="Servo"
-        //% color="#fc0303"
         //% weight=99 help=servos/run
         //% blockId=servoservorun block="Động cở servo %servo chạy liên tục ở tốc độ %speed=speedPicker \\%"
         //% servo.fieldEditor="gridpicker"
@@ -182,7 +181,6 @@ namespace IchiRobotic {
         // It will also not provide any holding force.
          //% block
     //% group="Servo"
-        //% color="#fc0303"
         //% weight=10 help=servos/stop
         //% blockId=servoservostop block="stop %servo"
         //% servo.fieldEditor="gridpicker"
@@ -216,7 +214,6 @@ namespace IchiRobotic {
          */
          //% block
     //% group="Servo"
-        //% color="#fc0303"
         //% help=servos/set-range
         //% blockId=servosetrange block="set %servo range from %minAngle to %maxAngle"
         //% minAngle.min=0 minAngle.max=90
@@ -236,7 +233,6 @@ namespace IchiRobotic {
          */
          //% block
     //% group="Servo"
-        //% color="#fc0303"
         //% help=servos/set-stop-on-neutral
         //% blockId=servostoponneutral block="set %servo stop on neutral %enabled"
         //% enabled.shadow=toggleOnOff
