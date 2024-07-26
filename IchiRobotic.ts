@@ -72,7 +72,6 @@ namespace IchiRobotic {
     // Điều chỉnh mã cho hàm thiết lập góc servo
      //% block
     //% group="Servo"
-    //% color="#fc0303"
     //% weight=100 help=servos/set-angle
     //% blockId=servoservosetangle block="Thiết lập góc động cơ servo %servo thành %degrees=protractorPicker °"
     //% degrees.defl=90
@@ -102,7 +101,6 @@ namespace IchiRobotic {
          */
          //% block
     //% group="Servo"
-        //% color="#fc0303"
         //% weight=100 help=servos/set-angle
         //% blockId=servoservosetangle block="Thiết lập góc động cơ servo %servo thành %degrees=protractorPicker °"
         //% degrees.defl=90
@@ -159,9 +157,8 @@ namespace IchiRobotic {
          */
          //% block
     //% group="Servo"
-        //% color="#fc0303"
         //% weight=10 help=servos/set-pulse
-        //% blockId=servoservosetpulse block="set %servo pulse to %micros μs"
+        //% blockId=servoservosetpulse block="Thiết lập xung động cơ serve %servo thành %micros μs"
         //% micros.min=500 micros.max=2500
         //% micros.defl=1500
         //% servo.fieldEditor="gridpicker"
